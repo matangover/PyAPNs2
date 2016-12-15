@@ -59,6 +59,7 @@ class Payload(object):
         self.content_available = content_available
         self.category = category
         self.custom = custom
+        self.mutable_content = mutable_content
 
     def dict(self):
         result = {
