@@ -113,7 +113,7 @@ class APNsClient(object):
             # sent by the server at any time.
             self.update_max_concurrent_streams()
             if next_notification and len(open_streams) < self._max_concurrent_streams:
-                logger.info('Sending to token %s', next_notification)
+                logger.info('Sending to token %s', next_notification.token)
                 stream_id = self.send_notification_async(
                     next_notification.token,
                     next_notification.payload,
