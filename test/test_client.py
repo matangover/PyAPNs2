@@ -13,7 +13,7 @@ class ClientTestCase(TestCase):
         # Ignore all log messages so that test output is not cluttered.
         logging.basicConfig(level=logging.CRITICAL)
         cls.tokens = ["%064x" % i for i in range(10000)]
-        cls.payload = Payload(alert="Hello, world!")
+        cls.payload = Payload(alert="Test alert")
         cls.notifications = [Notification(token=token, payload=cls.payload) for token in cls.tokens]
         cls.topic = "com.example.App"
 
